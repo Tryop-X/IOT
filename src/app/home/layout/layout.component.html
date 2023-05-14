@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" style="background:  #111111d9">
+  <button mat-button  routerLink="/"><mat-icon>home</mat-icon> Internet de las cosas</button>
+  <span class="example-spacer"></span>
+  <span *ngIf="islogged" class="cont-user"> <img src="assets/imagenes/user.png" alt="icono-usuario"> {{nombreUsuario}}
+  </span>
+  <button mat-button *ngIf="isAdmin" routerLink="/registro" style="margin-right: 12px">
+    <mat-icon>person_add</mat-icon>Crear usuario
+  </button>
+  <button mat-button *ngIf="islogged" (click)="logOut()">
+    <mat-icon>exit_to_app</mat-icon>Cerrar sesi&oacute;n
+  </button>
+  <button mat-button
+
+          *ngIf="!islogged"x [disabled]="false">
+    <mat-icon>person_outline</mat-icon>Grupo del Lokeras
+  </button>
+</mat-toolbar>
+<div class="container">
+  <app-qas-libre></app-qas-libre>
+</div>

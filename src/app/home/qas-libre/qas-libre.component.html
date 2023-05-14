@@ -1,0 +1,39 @@
+<google-map #map
+            [center]="center"
+            [zoom]="zoom"
+            height="800px"
+            width="100%"
+>
+
+</google-map>
+
+<mat-form-field class="example-form-field">
+  <mat-label>Latitud</mat-label>
+  <input matInput type="number"
+         [disabled] = "mover"
+         [(ngModel)]="lat"
+         step="0.000001"
+  >
+</mat-form-field>
+<mat-form-field class="example-form-field">
+  <mat-label>Longitud</mat-label>
+  <input matInput type="number"
+         [disabled] = "mover"
+         [(ngModel)]="lng"
+         step="0.000001"
+  >
+</mat-form-field>
+
+<mat-slide-toggle [(ngModel)]="mover">Activar Movimiento!</mat-slide-toggle>
+
+<!--<div>-->
+<!--  <label>-->
+<!--    Latitud:-->
+<!--    <input type="number" #latInput>-->
+<!--  </label>-->
+<!--  <label>-->
+<!--    Longitud:-->
+<!--    <input type="number" #lngInput>-->
+<!--  </label>-->
+<!--  <button (click)="setMarkerPosition(latInput.value, lngInput.value)">Mover Marcador</button>-->
+<!--</div>-->
