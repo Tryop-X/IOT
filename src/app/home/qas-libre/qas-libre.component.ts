@@ -25,7 +25,6 @@ export class QasLibreComponent implements OnInit{
     this.locationService.getUbicacion(this.api).subscribe(
       data => {
         console.log(data)
-
         this.lat = data.latitude;
         this.lng = data.longitude;
       }, error => {
@@ -57,8 +56,8 @@ export class QasLibreComponent implements OnInit{
 
     setInterval(() => {
       if(this.mover){
-        this.lat += 0.00011;
-        this.lng += 0.00011; // Solo para demostrar - elimina esta línea para la producción
+        // this.lat += 0.00011;
+        // this.lng += 0.00011; // Solo para demostrar - elimina esta línea para la producción
         this.center = {
           lat: this.lat,
           lng: this.lng,
